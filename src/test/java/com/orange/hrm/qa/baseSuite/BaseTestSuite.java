@@ -7,7 +7,7 @@ import com.dev.orange.hrm.Managers.DriverManager;
 import com.dev.orange.hrm.listeners.ExtentReport;
 import com.dev.orange.hrm.utilities.Log;
 
-public class BaseTest extends DriverManager {
+public class BaseTestSuite extends DriverManager {
 
 	@BeforeMethod
 	public void setUp() {
