@@ -15,7 +15,7 @@ import io.qameta.allure.SeverityLevel;
 
 public class PIMPageTest extends BaseTest {
 
-	@Description("Validate tabs Configuration List, Employee List, Add Employee & Reports are displayed in PIM Page")
+	@Description("Validate tab Configuration List, Employee List, Add Employee & Reports are displayed in PIM Page")
 	@Severity(SeverityLevel.CRITICAL)
 	@Test
 	public void tc_hrm_employees_002() {
