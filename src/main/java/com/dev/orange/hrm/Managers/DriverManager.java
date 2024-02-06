@@ -56,7 +56,7 @@ public class DriverManager {
 
 	public static WebDriver createInstance(String browser) {
 
-		switch (browser.toLowerCase()) {
+		switch (browser.toLowerCase().trim()) {
 
 		case "chrome":
 			driver.set(new ChromeDriver());
