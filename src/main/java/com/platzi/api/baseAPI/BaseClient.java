@@ -73,6 +73,18 @@ public class BaseClient {
 		return body;
 	}
 	
+	public static String createNewUser() {
+		String userDetails = "{\r\n"
+				+ "  \"name\": \"Admin57\",\r\n"
+				+ "  \"email\": \"Admin57@gmail.com\",\r\n"
+				+ "  \"password\": \"Admin123\",\r\n"
+				+ "  \"avatar\": \"https://picsum.photos/800\",\r\n"
+				+ "  \"role\": \"admin\"\r\n"
+				+ "}";
+	return userDetails;
+}
+	
+	
 	public static String getKeyValueFromJsonResponse(String response,String key) {
 		
 		String value = null;

@@ -46,5 +46,16 @@ public class platziTest extends BaseClient {
 		Assert.assertEquals(actual, 401);
 	}
 	
+	@Description("Validate Single Product is visible in product using GET call")
+	@Test
+	public void tc_post_api_platzi_003() {
+		
+		response = httpRequest.createProductUsingPostCall(createNewUser());
+		int actual =response.getStatusCode();
+		Assert.assertEquals(actual, 200);
+	}
+	
+	
+	
 
 }

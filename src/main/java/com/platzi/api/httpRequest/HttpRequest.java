@@ -57,6 +57,15 @@ import io.restassured.response.Response;
 			return response;
 		}
 		
+		public Response retrieveProductUsingGetCall(int id) {
+			
+			headerMap = setHeaders();
+			SessionFilter session=new SessionFilter();
+			Response response =  getbaseUrl().headers(headerMap)
+					.log().all().filter(session).when().get(getInputProperty("endPointurl")+ id).then().log().all().extract().response();
+			return response;
+		}
+		
 }
 
 

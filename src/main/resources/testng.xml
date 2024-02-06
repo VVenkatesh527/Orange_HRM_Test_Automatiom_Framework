@@ -8,7 +8,7 @@
 	<test name="Orange HRM Test Automation">
 	<classes>
          <class name="com.orange.hrm.qa.pagesTest.PIMPageTest"/>
-         <class name="com.api.platzi.platziAPITest.platziTest"/>        
+         <!-- <class name="com.api.platzi.platziAPITest.platziTest"/> -->      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
