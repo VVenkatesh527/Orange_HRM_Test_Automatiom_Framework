@@ -33,12 +33,12 @@ import io.restassured.response.Response;
 			return response;
 		}
 		
-		public Response retrieveProductUsingGetCall(String id) {
+		public Response retrieveProductUsingGetCall() {
 			
 			headerMap = setHeaders();
 			SessionFilter session=new SessionFilter();
 			Response response =  getbaseUrl().headers(headerMap)
-					.log().all().filter(session).when().get(getInputProperty("endPointurl")+id).then().log().all().extract().response();
+					.log().all().filter(session).when().get(getInputProperty("endPointurl")).then().log().all().extract().response();
 			return response;
 		}
 		

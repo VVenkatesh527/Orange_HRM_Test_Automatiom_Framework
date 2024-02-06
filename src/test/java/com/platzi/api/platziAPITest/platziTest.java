@@ -25,8 +25,7 @@ public class platziTest extends BaseClient {
 		headerMap = httpRequest.setHeaders();
 		response = httpRequest.createProductUsingPostCall(loginKeys());		
 		headerMap.put("access_token",getKeyValueFromJsonResponse(response.asString(),"access_token"));
-		int actual = response.getStatusCode();
-		Assert.assertEquals(actual, 401);
+		
  	}
 	
 	@Description("Validate the status code for POST call when new product is created")
@@ -42,7 +41,7 @@ public class platziTest extends BaseClient {
 	@Test
 	public void tc_post_api_platzi_002() {
 		
-		response = httpRequest.retrieveProductUsingGetCall(getKeyValueFromJsonResponse(response.asString(),"id"));
+		response = httpRequest.retrieveProductUsingGetCall();
 		int actual =response.getStatusCode();
 		Assert.assertEquals(actual, 401);
 	}

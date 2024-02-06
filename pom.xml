@@ -10,7 +10,7 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<selenium-java>4.11.0</selenium-java>
+		<selenium-java>4.15.0</selenium-java>
 		<testng-version>7.7.1</testng-version>
 		<aspectj.version>1.9.19</aspectj.version>
 	</properties>
