@@ -23,7 +23,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/VVenkatesh527/Orange_HRM_Test_Automatiom_Framework'
-                    sh 'mvn -D clean test'
+                    sh 'mvn clean test'
                 }
             }
         }
