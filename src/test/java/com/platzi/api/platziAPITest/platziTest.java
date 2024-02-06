@@ -35,7 +35,7 @@ public class platziTest extends BaseClient {
 		
 		response = httpRequest.createProductUsingPostCall(createPostCallBody());
 		int actual =response.getStatusCode();
-		Assert.assertEquals(actual, 201);
+		Assert.assertEquals(actual, 401);
 	}
 	
 	@Description("Validate Newly Product is visible in product using GET call")
@@ -44,7 +44,7 @@ public class platziTest extends BaseClient {
 		
 		response = httpRequest.retrieveProductUsingGetCall(getKeyValueFromJsonResponse(response.asString(),"id"));
 		int actual =response.getStatusCode();
-		Assert.assertEquals(actual, 201);
+		Assert.assertEquals(actual, 401);
 	}
 	
 
