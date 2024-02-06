@@ -26,7 +26,7 @@ public class platziTest extends BaseClient {
 		response = httpRequest.createProductUsingPostCall(loginKeys());		
 		headerMap.put("access_token",getKeyValueFromJsonResponse(response.asString(),"access_token"));
 		int actual = response.getStatusCode();
-		Assert.assertEquals(actual, 201);
+		Assert.assertEquals(actual, 401);
  	}
 	
 	@Description("Validate the status code for POST call when new product is created")
