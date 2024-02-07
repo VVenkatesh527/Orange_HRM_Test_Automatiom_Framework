@@ -20,7 +20,7 @@ pipeline
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                 
                     git 'https://github.com/VVenkatesh527/Orange_HRM_Test_Automatiom_Framework'
-                    bat 'mvn -Dmaven.test.failure.ignore=true clean package'
+                    bat 'mvn install'
                   }
             }
         }
