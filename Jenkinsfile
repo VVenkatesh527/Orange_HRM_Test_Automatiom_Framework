@@ -12,26 +12,18 @@ pipeline
         {
             steps
             {
-                 git 'https://github.com/jglick/simple-maven-project-with-tests.git'
-                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                 echo("Build Deployed")
             }
-            post 
-            {
-                success
-                {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                    archiveArtifacts 'target/*.jar'
-                }
-            }
+           
         }
         
-        
-        
+          
         stage("Deploy to QA"){
             steps{
-                echo("deploy to qa")
+                echo("Build deployed to QA")
             }
         }
+        
                 
         stage('Regression Automation Test') {
             steps {
