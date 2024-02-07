@@ -19,7 +19,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                 
-                    git 'https://github.com/VVenkatesh527/Orange_HRM_Test_Automatiom_Framework'
+                    git 'https://github.com/VVenkatesh527/Orange_HRM_Test_Automatiom_Framework.git'
                     bat 'mvn install'
                   }
             }
