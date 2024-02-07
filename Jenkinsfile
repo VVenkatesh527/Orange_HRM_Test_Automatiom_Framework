@@ -29,8 +29,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/VVenkatesh527/Orange_HRM_Test_Automatiom_Framework'
-                    bat "mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/testng.xml"
-                    
+                    bat 'mvn clean test=src/main/resources/testng.xml'                    
                 }
             }
         }
