@@ -10,6 +10,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -28,6 +29,7 @@ public class DriverManager {
 	public static Properties prop = null;
 	public static WebDriverWait wait = null;
 	public static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+	
 	private static final String defaultPropertiesFile = System.getProperty("user.dir") + "//src//main//resources//";
 	protected static String reportPath = System.getProperty("user.dir") + "//Reports//AutomationExtentReport.html";
 	protected static LoginPage loginPage = null;
@@ -61,8 +63,10 @@ public class DriverManager {
 		switch (browser.toLowerCase().trim()) {
 
 		case "chrome":
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
 			WebDriverManager.chromedriver().clearDriverCache().setup();
-			driver.set(new ChromeDriver());
+			driver.set(new ChromeDriver(options));
 			break;
 
 		case "edge":
