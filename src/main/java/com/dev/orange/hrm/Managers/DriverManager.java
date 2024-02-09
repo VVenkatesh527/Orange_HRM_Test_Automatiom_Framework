@@ -20,6 +20,8 @@ import com.dev.orange.hrm.pageObjects.LoginPage;
 import com.dev.orange.hrm.pageObjects.PIMPage;
 import com.dev.orange.hrm.utilities.Log;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class DriverManager {
 
 	public static FileInputStream inputStream = null;
@@ -59,10 +61,12 @@ public class DriverManager {
 		switch (browser.toLowerCase().trim()) {
 
 		case "chrome":
+			WebDriverManager.chromedriver().clearDriverCache().setup();
 			driver.set(new ChromeDriver());
 			break;
 
 		case "edge":
+			WebDriverManager.edgedriver().clearDriverCache().setup();
 			driver.set(new EdgeDriver());
 			break;
 
