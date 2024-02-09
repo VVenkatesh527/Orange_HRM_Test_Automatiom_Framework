@@ -9,6 +9,8 @@
 	<name>Orange HRM Test Automation Framwork</name>
 	<url>http://maven.apache.org</url>
 	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<selenium-java>4.15.0</selenium-java>
 		<testng-version>7.7.1</testng-version>
